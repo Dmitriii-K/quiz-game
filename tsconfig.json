@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
   "compilerOptions": {
     "module": "commonjs",
     "declaration": true,
@@ -12,10 +17,16 @@
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "noFallthroughCasesInSwitch": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "src/*": ["./src/*"]
+    }
+  },
+  "file":["./src/types/express/index.d.ts"]
 }
